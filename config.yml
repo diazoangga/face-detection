@@ -1,0 +1,27 @@
+
+DATASET:
+    RAW_DATA_DIR: './face_train/train'
+    POS_DATASET_NUM: 1237
+    DATASET_DIR: './face_train/train/images/extracted_img'
+    VAL_RATIO: 0.15
+TEST:
+    WEIGHT_FILE: './train_out/img_class.epoch12-loss0.04.h5'
+    TEST_FILE: './face_test_example/test_example'
+    EVAL_RESULT_DIR: './eval_out'
+    TEST_BATCH_SIZE: 1
+    THRESHOLD: 0.82
+    CALCULATE_THRESHOLD: False
+TRAIN:
+    IMG_HEIGHT: 256
+    IMG_WIDTH: 256
+    MODEL_SAVE_DIR: './train_out'
+    TBOARD_SAVE_DIR: './logs/fit'
+    BATCH_SIZE: 32
+    EPOCH_NUMS: 1
+SOLVER:
+    INITIAL_LR: 0.001
+    FINAL_LR: 0.0001
+INFERENCE:
+    MODE: 'IMAGE'
+    IMG_FILE: './face_test_example/inference_single_img/face.jpg'
+    
