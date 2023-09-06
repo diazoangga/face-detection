@@ -75,9 +75,12 @@ HTTPStatus Exception: 429
 ### ✔️ Prerequisites
 
 Before you begin, ensure that you have the following prerequisites installed:
-> - `ℹ️ Requirement 1`
-> - `ℹ️ Requirement 2`
-> - `ℹ️ ...`
+> - `ℹ️ tensorflow = 2.9.1`
+> - `ℹ️ pyyaml = 6.0`
+> - `ℹ️ numpy = 1.21.6`
+> - `ℹ️ matplotlib = 3.5.2`
+> - `ℹ️ Pillow = 9.1.1`
+> - `ℹ️ opencv-contrib-python = 4.5.5.64`
 
 ### 📦 Installation
 
