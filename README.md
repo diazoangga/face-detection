@@ -35,23 +35,11 @@
 
 ## 📍 Overview
 
-HTTPStatus Exception: 429
-
----
-
-## ⚙️ Features
-
-HTTPStatus Exception: 429
+This program has the main feature of classifying an image to a face and non-face image classification. The model that is being currently used is a CNN model.
 
 ---
 
 
-## 📂 Project Structure
-
-
-
-
----
 
 ## 🧩 Modules
 
@@ -132,20 +120,48 @@ pip install -r requirements.txt
    ```sh
     python training.py
     ```
-### 🧪 Running Tests
-```sh
-pytest
-```
+### 🧪 Evaluate the Trained Model
+1. Open "config.yml"
+2. Set every parameter below:
+    - TEST:
+    - WEIGHT_FILE     : weight file for the model, in this case --> './New_folder/train_out/conv256_32_sigmoid/img_class.epoch12-loss0.04.h5'
+    - TEST_FILE       : path consisting of the testing dataset
+    - EVAL_RESULT_DIR : './eval_out'
+    - TEST_BATCH_SIZE : 1
+    - THRESHOLD       : Set the threshold value (in this case 0.82)
+    - CALCULATE_THRESHOLD: False
+3. Run "evaluate.py" and it will calculate the optimum threshold for the model at the end of line.
+   ``` sh
+   python evaluate.py
+   ```
+5. optional: it can calculate the optimum threshold value by enabling "CALCULATE_THRESHOLD" into "True".
+6. After running "python evaluate.py", you can see the graph of threshold-accuracy on './eval_out/Threshold-Accuracy_Graph.png'. And you can change the "THRESHOLD" on "config.yml" to the optimum threshold value
 
----
+### 🧪 Inference
 
+1. Open "config.yml"
+2. There are 2 ways to do the inference phase:
+    - MODE: 'IMAGE'
+    - MODE: 'DATASET'
+    The first one is to classify face-nonface with the input of a single image.
+    The second one is to classify face-nonface with the inputs of predefined testing datasets and output the result in a JSON file
 
-## 🗺 Roadmap
+3. If you want to classify face-nonface with a predetermined dataset and generate the JSON file consisting inference-result:
+    Change "MODE" in "config.yml" to "DATASET" and change the "TEST_FILE" in the "config.yml" to a path that consists of the dataset.
+    and run "python inference.py". The file will be saved as './eval_out_test_dataset_result.json'
 
-> - [X] `ℹ️  Task 1: Implement X`
-> - [ ] `ℹ️  Task 2: Refactor Y`
-> - [ ] `ℹ️ ...`
+4. If you want to run the classifier of face-nonface with a single input image:
+    Change "MODE" in "config.yml" to "IMAGE"
+    and run "python inference.py". The result will be shown on the command prompt screen
 
+### NOTES:
+1. train-results such as trained weight, tensorboard, model architecture, loss and accuracy will be saved in './train_out'
+2. train-log (tensorboard) will be saved in ./logs/fit.
+    To access the tensorboard result, go to the command prompt screen and type "tensorboard --logdir logs/fit"
+    and go to this URL: http://localhost:6006/
+3. the JSON file consisting of the inference result of the given test dataset example is saved on './eval_out/test_dataset_result.json'
+4. The threshold that being used is 0.82
+5. The weight that is being used is ./train_out/img_class.epoch12-loss0.04.h5'
 
 ---
 
@@ -175,11 +191,5 @@ The project maintainers will review your changes and provide feedback or merge t
 ## 📄 License
 
 This project is licensed under the `ℹ️  INSERT-LICENSE-TYPE` License. See the [LICENSE](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository) file for additional info.
-
----
-
-## 👏 Acknowledgments
-
-> - `ℹ️  List any resources, contributors, inspiration, etc.`
 
 ---
