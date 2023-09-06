@@ -103,12 +103,12 @@ pip install -r requirements.txt
 
 1. Open "config.yml"
 2. Set every parameter below:
-   ```sh
+ 
     RAW_DATA_DIR    : the downloaded dataset path (raw dataset)
     POS_DATASET_NUM : number of raw dataset #1237
     DATASET_DIR     : path that you want to save you dataset to after being preprocessed 
     VAL_RATIO       : ratio between validation and training dataset
-    ```
+
 3. Run "dataset_gen.py" on the command prompt
    ```sh
     python dataset_gen.py
