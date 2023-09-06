@@ -37,7 +37,7 @@ This program has the main feature of classifying an image to a face and non-face
 
 | File                                                                                          | Summary                   |
 | ---                                                                                           | ---                       |
-| [config_utils.py](https://github.com/diazoangga/face-detection.git/blob/main/config_utils.py) | All the setting customization is stored here for dataset generation, model settings, training settings, and output folder naming |
+| [config_utils.py](https://github.com/diazoangga/face-detection/blob/main/config_utils.py) | All the setting customization is stored here for dataset generation, model settings, training settings, and output folder naming |
 | [dataset_gen.py](https://github.com/diazoangga/face-detection.git/blob/main/dataset_gen.py)   | Dataset generation |
 | [evaluate.py](https://github.com/diazoangga/face-detection.git/blob/main/evaluate.py)         | Evaluate the training results |
 | [inference.py](https://github.com/diazoangga/face-detection.git/blob/main/inference.py)       | Testing the training results |
@@ -45,7 +45,6 @@ This program has the main feature of classifying an image to a face and non-face
 | [training.py](https://github.com/diazoangga/face-detection.git/blob/main/training.py)         | Training code |
 
 </details>
-
 ---
 
 ## 🚀 Getting Started
