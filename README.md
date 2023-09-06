@@ -103,11 +103,10 @@ pip install -r requirements.txt
 
 1. Open "config.yml"
 2. Set every parameter below:
- 
-    RAW_DATA_DIR    : the downloaded dataset path (raw dataset)
-    POS_DATASET_NUM : number of raw dataset #1237
-    DATASET_DIR     : path that you want to save you dataset to after being preprocessed 
-    VAL_RATIO       : ratio between validation and training dataset
+>   - RAW_DATA_DIR    : the downloaded dataset path (raw dataset)
+>   - POS_DATASET_NUM : number of raw dataset #1237
+>   - DATASET_DIR     : path that you want to save you dataset to after being preprocessed
+>   - VAL_RATIO       : ratio between validation and training dataset
 
 3. Run "dataset_gen.py" on the command prompt
    ```sh
@@ -116,10 +115,23 @@ pip install -r requirements.txt
 
 ### 🎮 Train face-detection
 
-```sh
-python main.py
-```
+1. Open "config.yml"
+2. Set every parameter below:
+    - TRAIN:
+    -   IMG_HEIGHT      : 256
+    -   IMG_WIDTH       : 256
+    -   MODEL_SAVE_DIR  : './train_out'
+    -   TBOARD_SAVE_DIR : './logs/fit'
+    -   BATCH_SIZE      : 32
+    -   EPOCH_NUMS      : 70
+    - SOLVER:
+    -   INITIAL_LR      : 0.001
+    -   FINAL_LR        : 0.0001
 
+3. Run "dataset_gen.py" on the command prompt
+   ```sh
+    python training.py
+    ```
 ### 🧪 Running Tests
 ```sh
 pytest
