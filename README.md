@@ -10,10 +10,6 @@
 <img src="https://img.shields.io/badge/Markdown-000000.svg?style&logo=Markdown&logoColor=white" alt="Markdown" />
 <img src="https://img.shields.io/badge/JSON-000000.svg?style&logo=JSON&logoColor=white" alt="JSON" />
 </p>
-<img src="https://img.shields.io/github/languages/top/diazoangga/face-detection.git?style&color=5D6D7E" alt="GitHub top language" />
-<img src="https://img.shields.io/github/languages/code-size/diazoangga/face-detection.git?style&color=5D6D7E" alt="GitHub code size in bytes" />
-<img src="https://img.shields.io/github/commit-activity/m/diazoangga/face-detection.git?style&color=5D6D7E" alt="GitHub commit activity" />
-<img src="https://img.shields.io/github/license/diazoangga/face-detection.git?style&color=5D6D7E" alt="GitHub license" />
 </div>
 
 ---
@@ -47,12 +43,12 @@ This program has the main feature of classifying an image to a face and non-face
 
 | File                                                                                          | Summary                   |
 | ---                                                                                           | ---                       |
-| [config_utils.py](https://github.com/diazoangga/face-detection.git/blob/main/config_utils.py) | HTTPStatus Exception: 429 |
-| [dataset_gen.py](https://github.com/diazoangga/face-detection.git/blob/main/dataset_gen.py)   | HTTPStatus Exception: 429 |
-| [evaluate.py](https://github.com/diazoangga/face-detection.git/blob/main/evaluate.py)         | HTTPStatus Exception: 429 |
-| [inference.py](https://github.com/diazoangga/face-detection.git/blob/main/inference.py)       | HTTPStatus Exception: 429 |
-| [model.py](https://github.com/diazoangga/face-detection.git/blob/main/model.py)               | HTTPStatus Exception: 429 |
-| [training.py](https://github.com/diazoangga/face-detection.git/blob/main/training.py)         | HTTPStatus Exception: 429 |
+| [config_utils.py](https://github.com/diazoangga/face-detection.git/blob/main/config_utils.py) | All the setting customization is stored here for dataset generation, model settings, training settings, and output folder naming |
+| [dataset_gen.py](https://github.com/diazoangga/face-detection.git/blob/main/dataset_gen.py)   | Dataset generation |
+| [evaluate.py](https://github.com/diazoangga/face-detection.git/blob/main/evaluate.py)         | Evaluate the training results |
+| [inference.py](https://github.com/diazoangga/face-detection.git/blob/main/inference.py)       | Testing the training results |
+| [model.py](https://github.com/diazoangga/face-detection.git/blob/main/model.py)               | MTraining model |
+| [training.py](https://github.com/diazoangga/face-detection.git/blob/main/training.py)         | Training code |
 
 </details>
 
